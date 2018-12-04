@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  IMAGE_BASE_URL,
-  POST_SIZE,
-  BACKDROP_SIZE,
-  POSTER_SIZE
-} from "../../../config";
+import { IMAGE_BASE_URL, BACKDROP_SIZE, POSTER_SIZE } from "../../../config";
 import FontAwesome from "react-fontawesome";
 import MovieThumb from "../MovieThumb/MovieThumb";
 import "./MovieInfo.css";
@@ -49,7 +44,7 @@ const MovieInfo = props => {
             <p className="rmdb-score">{props.movie.vote_average}></p>
           </div>
           {props.directors.length > 1 ? <h3>DIRECTORS</h3> : <h3>DIRECTOR</h3>}
-          {props.director.map((element, i) => {
+          {props.directors.map((element, i) => {
             return (
               <p key={i} className="rmdb-director">
                 {element.name}
